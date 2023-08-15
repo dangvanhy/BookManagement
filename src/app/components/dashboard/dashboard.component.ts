@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, map } from 'rxjs';
 import { Author } from 'src/app/models/author';
 import { Book } from 'src/app/models/book';
 import { Genre } from 'src/app/models/genre';
@@ -33,8 +34,32 @@ export class DashboardComponent implements OnInit {
     this.bookService.GetBook().subscribe(x => {
       this.books = x;
     });
-
   }
+
+  public getNameOfGenre(id: number): Observable<string> {
+    return this.genreService.getGerneById(id).pipe(
+      map((genre: Genre | undefined) => {
+        if (genre) {
+          return genre.name;
+        } else {
+          return "Unknown Genre";
+        }
+      })
+    );
+  }
+
+  public getNameOfAuthor(id: number): Observable<string> {
+    return this.authorService.getAuthorById(id).pipe(
+      map((author: Author | undefined) => {
+        if (author) {
+          return author.name;
+        } else {
+          return "Unknown Author";
+        }
+      })
+    );
+  }
+  
 
   public ChangeToAuthor(): void {
     this.content = "Author"
