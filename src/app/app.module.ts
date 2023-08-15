@@ -8,6 +8,17 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { BookComponent } from './components/book/book.component';
+import { BookContainerComponent } from './components/book-container/book-container.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -16,11 +27,22 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     FooterComponent,
     LoginComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    BookComponent,
+    BookContainerComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    HttpClientModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

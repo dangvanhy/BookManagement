@@ -1,1 +1,52 @@
-<p>dashboard works!</p>
+<style>
+    .mat-button {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+</style>
+
+<app-header></app-header>
+
+<div class="min-h-screen flex flex-row">
+    <div class="w-1/6 border-r border-background flex flex-col">
+        <button class="text-xl font-normal" (click)="ChangeToBook()" mat-button>Sách</button>
+        <button class="text-xl font-normal" (click)="ChangeToGenre()" mat-button>Thể loại</button>
+        <button class="text-xl font-normal" (click)="ChangeToAuthor()" mat-button>Tác giả</button>
+    </div>
+
+    <div *ngIf="content == 'Book'" class="w-5/6 flex justify-center py-5">
+        <div class="w-3/4">
+            <table class="w-full table-fixed">
+                <tr class="text-xl font-semibold">
+                    <th class="p-3">Tên sách</th>
+                    <th class="p-3">Đường dẫn</th>
+                    <th class="p-5">Tác giả</th>
+                    <th class="p-5">Thể loại</th>
+                    <th class="p-5"></th>
+                </tr>
+                <tr *ngFor="let book of books">
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.filePath }}</td>
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.name }}</td>
+                    <td class="flex flex-row gap-3">
+                        <img class="w-8 h-8 cursor-pointer hover:shadow-md" src="https://img.icons8.com/?size=512&id=H5dKJanZkZNk&format=png" alt="">
+                        <img class="w-8 h-8 cursor-pointer hover:shadow-md" src="https://img.icons8.com/?size=512&id=67884&format=png" alt="">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div *ngIf="content == 'Genre'">
+        2
+    </div>
+
+    <div *ngIf="content == 'Author'">
+        3
+    </div>
+
+    
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,17 @@
+<div class="flex flex-col gap-8 p-8 w-full">
+    <div class="flex flex-row justify-between items-end w-full">
+        <div class="text-4xl font-bold text-primary">
+            Kệ sách
+        </div>
+
+        <form class="w-fit flex flex-row gap-6 bg-background justify-center items-center px-4 py-1 rounded-md">
+            <mat-form-field class="px-3 rounded-sm w-96">
+                <input matInput placeholder="Search Books" (input)="handleChange($event)" (keydown.enter)="handleChange($event)" value="">
+            </mat-form-field>
+        </form>
+    </div>
+
+    <div class="grid grid-cols-3 gap-20 ">
+        <app-book *ngFor="let book of books" [book]="book"></app-book>
+    </div>
+</div>

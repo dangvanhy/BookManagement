@@ -15,7 +15,16 @@ module.exports = {
     textColor: {
       'primary': '#523B29',
       'secondary': '#BDB5AE',
-    }
+      'background': '#F9F3EE'
+    },
+    colors: {
+      'background': '#F9F3EE',
+      'white': '#FFFFFF',
+      'black': '#000000',
+      'primary': '#523B29',
+      'secondary': '#BDB5AE',
+      'background': '#F9F3EE'
+    },
   },
   variants: {
     extend: {},

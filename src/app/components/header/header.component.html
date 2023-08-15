@@ -1,10 +1,35 @@
-<div class="py-3 flex flex-row gap-32 justify-center items-center">
-    <div class="text-2xl">
+<div class="py-6 flex flex-row gap-32 justify-between items-center px-8 border-b border border-background">
+    <div (click)="goToHome()" class="text-2xl cursor-pointer">
         <span class="text-secondary">good</span><span class="text-primary">reads</span>
     </div>
-    <div class="flex flex-row gap-5 font-semibold">
-        <div class="text-xl">Trang chủ</div>
-        <div class="text-xl">Sách</div>
-    </div>
     
+    <div class="flex flex-row gap-10 justify-center items-center">
+        <div class="flex flex-row gap-8">
+            <div (click)="goToHome()" class="text-xl cursor-pointer hover:text-secondary">Trang chủ</div>
+            <div class="text-xl cursor-pointer hover:text-secondary">Sách của tôi</div>
+            <div class="text-xl cursor-pointer hover:text-secondary">Cộng đồng</div>
+        </div>
+    </div>
+
+    <div class="flex flex-row gap-7 justify-center items-center">
+        <div class="w-6 h-6">
+            <img class="w-full h-full" src="https://img.icons8.com/?size=512&id=11642&format=png" alt="Bell">
+        </div>
+    
+        <div class="w-6 h-6">
+            <img class="w-full h-full" src="https://img.icons8.com/?size=512&id=143&format=png" alt="Bell">
+        </div>
+    
+        <div class="w-6 h-6">
+            <img class="w-full h-full" src="https://img.icons8.com/?size=512&id=132&format=png" alt="Bell">
+        </div>
+    
+        <div class="w-6 h-6">
+            <img class="w-full h-full" src="https://img.icons8.com/?size=512&id=11168&format=png" alt="Bell">
+        </div>
+    
+        <div class="w-9 h-9 cursor-pointer rounded-full">
+            <img (click)="gotoDashboard()" class="w-full h-full" src="https://img.icons8.com/?size=512&id=98957&format=png" alt="User">
+        </div>
+    </div>
 </div>
